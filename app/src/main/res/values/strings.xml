@@ -8,4 +8,6 @@
     <string name="pass">Your Password</string>
     <string name="confirmPass">Confirm Password</string>
     <string name="signup_fb">Sign Up with Facebook</string>
+
+    <string name="facebook_app_id">754768237979347</string>
 </resources>

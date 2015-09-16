@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:paddingBottom="16dp"
         android:text="@string/signup"
         android:id="@+id/textView1"
         android:layout_gravity="center"
@@ -70,13 +70,19 @@
         android:layout_gravity="center"
         android:textColor="@color/black"/>
 
-    <Button
-        android:id="@+id/btn_fb"
+    <com.facebook.login.widget.LoginButton
+        android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/signup_fb"
-        android:background="@drawable/button_fb_bg"
-        android:textColor="@color/white"
         />
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_fb"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/signup_fb"-->
+        <!--android:background="@drawable/button_fb_bg"-->
+        <!--android:textColor="@color/white"-->
+        <!--/>-->
 
 </LinearLayout>
