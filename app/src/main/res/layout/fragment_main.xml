@@ -57,7 +57,9 @@
         android:id="@+id/btn_signup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/signup" />
+        android:text="@string/signup"
+        android:background="@drawable/button_bg"
+        android:textColor="@color/white"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -72,6 +74,9 @@
         android:id="@+id/btn_fb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/signup_fb" />
+        android:text="@string/signup_fb"
+        android:background="@drawable/button_fb_bg"
+        android:textColor="@color/white"
+        />
 
 </LinearLayout>

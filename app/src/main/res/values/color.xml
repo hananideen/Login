@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="red">#FF0000</color>
+    <color name="valencia">#D64541</color>
+    <color name="valencia_dark">#C0392B</color>
     <color name="blue">#59abe3</color>
+    <color name="chambray">#3A539B</color>
+    <color name="steel">#4B77BE</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
     <color name="purple">#BE90D4</color>
-    <color name="valencia">#D64541</color>
     <color name="green">#2ABB9B</color>
     <color name="niagara">#16a085</color>
     <color name="sunglo">#E26A6A</color>
