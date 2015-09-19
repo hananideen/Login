@@ -1,32 +1,40 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivityFragment"
-    android:orientation="vertical">
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivityFragment">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="16dp"
         android:text="@string/signup"
-        android:id="@+id/textView1"
-        android:layout_gravity="center"
-        android:textColor="@color/black"/>
+        android:id="@+id/tv_title"
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_centerHorizontal="true" />
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:text="@string/terms"
-        android:id="@+id/checkBox" />
+        android:id="@+id/checkBox"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tv_title"/>
 
     <LinearLayout
         android:padding="16dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_details"
+        android:layout_below="@+id/checkBox"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,16 +44,18 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView"
+                android:paddingRight="10dp"
+                android:id="@+id/iv_email"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_email"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText1"
+                android:id="@+id/et_email"
                 android:hint="@string/email"
-                android:inputType="textEmailAddress"/>
+                android:inputType="textEmailAddress"
+                style="@style/Base.TextAppearance.AppCompat"/>
 
         </LinearLayout>
 
@@ -57,16 +67,18 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView2"
+                android:paddingRight="10dp"
+                android:id="@+id/iv_name"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_face"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText2"
+                android:id="@+id/et_name"
                 android:hint="@string/name"
-                android:inputType="textCapWords"/>
+                android:inputType="textCapWords"
+                style="@style/Base.TextAppearance.AppCompat"/>
             </LinearLayout>
 
         <LinearLayout
@@ -77,16 +89,18 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView3"
+                android:paddingRight="10dp"
+                android:id="@+id/ic_pass"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_password"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText3"
+                android:id="@+id/et_pass"
                 android:hint="@string/pass"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                style="@style/Base.TextAppearance.AppCompat"/>
             </LinearLayout>
 
         <LinearLayout
@@ -97,16 +111,18 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/imageView4"
+                android:paddingRight="10dp"
+                android:id="@+id/iv_confirm_pass"
                 android:layout_gravity="center"
                 android:src="@drawable/ic_password"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/editText4"
+                android:id="@+id/et_confirm_pass"
                 android:hint="@string/confirmPass"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                style="@style/Base.TextAppearance.AppCompat"/>
             </LinearLayout>
     </LinearLayout>
 
@@ -116,21 +132,56 @@
         android:layout_height="wrap_content"
         android:text="@string/signup"
         android:background="@drawable/button_bg"
-        android:textColor="@color/white"/>
+        android:textColor="@color/white"
+        android:layout_below="@+id/ll_details"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="16dp"
         android:text="OR"
-        android:id="@+id/textView2"
+        android:id="@+id/tv_or"
         android:layout_gravity="center"
-        android:textColor="@color/black"/>
+        style="@style/Base.TextAppearance.AppCompat.Headline"
+        android:layout_below="@+id/btn_signup"
+        android:layout_alignLeft="@+id/tv_title"
+        android:layout_alignStart="@+id/tv_title" />
 
     <com.facebook.login.widget.LoginButton
         android:id="@+id/login_button"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:layout_below="@+id/tv_or"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout2">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/copyright"
+            android:id="@+id/tv_copyright"
+            android:layout_gravity="center"
+            style="@style/Base.TextAppearance.AppCompat"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/policy"
+            android:layout_gravity="center"
+            android:id="@+id/tv_policy"
+            style="@style/Base.TextAppearance.AppCompat"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Login</string>
     <string name="action_settings">Settings</string>
+
+    <!--Sign-UP-->
     <string name="signup">Sign-Up</string>
     <string name="terms">I agree to the Terms of Use and Privacy Policy</string>
     <string name="email">Your E-mail</string>
@@ -8,6 +10,8 @@
     <string name="pass">Your Password</string>
     <string name="confirmPass">Confirm Password</string>
     <string name="signup_fb">Sign Up with Facebook</string>
+    <string name="copyright">Copyright © 2015</string>
+    <string name="policy">Terms of Use  Privacy Policy</string>
 
     <string name="facebook_app_id">754768237979347</string>
 </resources>
